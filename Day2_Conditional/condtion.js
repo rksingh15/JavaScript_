@@ -63,3 +63,4 @@ else {
 let isMember = true;
 let discount = isMember ? 0.1 : 0.05;
 console.log("Discount:", discount);
+
