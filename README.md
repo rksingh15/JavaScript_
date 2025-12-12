@@ -1,7 +1,7 @@
 "# JavaScript Learning Journey
 
 ## Overview
-This repository documents your JavaScript learning progress from Day 1 to Day 3, covering fundamental concepts including objects, conditional statements, and loops.
+This repository documents your JavaScript learning progress from Day 1 to Day 4, covering fundamental concepts including objects, conditional statements, loops, and methods.
 
 ---
 
@@ -179,6 +179,51 @@ for (let i = 0; i < str.length; i++) {
 
 ---
 
+## **Day 4: Methods**
+
+### Topics Covered:
+
+#### 1. **Function Declaration**
+```javascript
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet('Ritik')); // Hello, Ritik!
+```
+
+#### 2. **Function Expression**
+```javascript
+const add = function(a, b) {
+    return a + b;
+};
+console.log(add(5, 3)); // 8
+```
+
+#### 3. **Arrow Functions**
+```javascript
+const multiply = (x, y) => x * y;
+console.log(multiply(4, 5)); // 20
+```
+
+#### 4. **Returning Values**
+```javascript
+function square(num) {
+    return num * num;
+}
+console.log(square(6)); // 36
+```
+
+#### 5. **Scope**
+- **Global Scope:** Variables declared outside any function.
+- **Local Scope:** Variables declared within a function.
+
+### Key Concepts:
+- Understanding function declarations vs expressions.
+- Using arrow functions for concise syntax.
+- Importance of scope in variable accessibility.
+
+---
+
 ## **Skills Learned Summary**
 
 ✅ JavaScript Variables & Data Types
@@ -194,16 +239,20 @@ for (let i = 0; i < str.length; i++) {
 ✅ String Properties & Iteration
 ✅ User Input with prompt()
 ✅ Console Output with console.log()
+✅ Function Declarations
+✅ Function Expressions
+✅ Arrow Functions
+✅ Understanding Scope (Global & Local)
 
 ---
 
 ## **What's Next?**
 
 Potential topics to explore:
-- Functions and scope
-- Arrays and array methods (map, filter, reduce, etc.)
+- Advanced functions (callback, closure)
+- Array methods (map, filter, reduce, etc.)
 - String methods
 - Objects and methods
 - DOM manipulation
 - Error handling (try-catch)
-- Asynchronous JavaScript (callbacks, promises, async/await)" 
+- Asynchronous JavaScript (callbacks, promises, async/await)"
