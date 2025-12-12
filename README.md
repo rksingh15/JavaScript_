@@ -1,7 +1,7 @@
 "# JavaScript Learning Journey
 
 ## Overview
-This repository documents your JavaScript learning progress from Day 1 to Day 4, covering fundamental concepts including objects, conditional statements, loops, and methods.
+This repository documents your JavaScript learning progress from Day 1 to Day 5, covering fundamental concepts including objects, conditional statements, loops, and methods.
 
 ---
 
@@ -224,6 +224,39 @@ console.log(square(6)); // 36
 
 ---
 
+## **Day 5: Array Methods**
+
+### Topics Covered:
+
+#### 1. **Array.map()**
+- Creates a new array populated with the results of calling a provided function on every element in the calling array.
+```javascript
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8]
+```
+
+#### 2. **Array.filter()**
+- Creates a new array with all elements that pass the test implemented by the provided function.
+```javascript
+const ages = [12, 18, 20, 16];
+const adults = ages.filter(age => age >= 18);
+console.log(adults); // [18, 20]
+```
+
+#### 3. **Array.reduce()**
+- Executes a reducer function on each element of the array, resulting in a single output value.
+```javascript
+const sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+console.log(sum); // 10
+```
+
+### Key Concepts:
+- Understanding how to manipulate arrays using built-in methods.
+- The difference between `map`, `filter`, and `reduce`.
+
+---
+
 ## **Skills Learned Summary**
 
 ✅ JavaScript Variables & Data Types
@@ -243,6 +276,7 @@ console.log(square(6)); // 36
 ✅ Function Expressions
 ✅ Arrow Functions
 ✅ Understanding Scope (Global & Local)
+✅ Array Methods: map, filter, reduce
 
 ---
 
@@ -250,7 +284,7 @@ console.log(square(6)); // 36
 
 Potential topics to explore:
 - Advanced functions (callback, closure)
-- Array methods (map, filter, reduce, etc.)
+- More on array methods
 - String methods
 - Objects and methods
 - DOM manipulation
