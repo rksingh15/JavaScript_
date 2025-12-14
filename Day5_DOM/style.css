@@ -1,0 +1,12 @@
+div {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid blue;
+
+    display: flex;              /* Flexbox ON */
+    justify-content: center;    /* Horizontal center */
+    align-items: center;        /* Vertical center */
+}

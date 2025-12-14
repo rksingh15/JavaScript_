@@ -1,7 +1,7 @@
 "# JavaScript Learning Journey
 
 ## Overview
-This repository documents your JavaScript learning progress from Day 1 to Day 5, covering fundamental concepts including objects, conditional statements, loops, and methods.
+This repository documents your JavaScript learning progress from Day 1 to Day 6, covering fundamental concepts including objects, conditional statements, loops, methods, DOM manipulation, and events.
 
 ---
 
@@ -224,36 +224,103 @@ console.log(square(6)); // 36
 
 ---
 
-## **Day 5: Array Methods**
+## **Day 5: DOM Manipulation**
 
 ### Topics Covered:
 
-#### 1. **Array.map()**
-- Creates a new array populated with the results of calling a provided function on every element in the calling array.
-```javascript
-const numbers = [1, 2, 3, 4];
-const doubled = numbers.map(num => num * 2);
-console.log(doubled); // [2, 4, 6, 8]
-```
+#### 1. **Selecting Elements**
+- `document.querySelector()` - Selects the first element that matches a CSS selector
+- `document.querySelectorAll()` - Selects all elements that match a CSS selector
 
-#### 2. **Array.filter()**
-- Creates a new array with all elements that pass the test implemented by the provided function.
-```javascript
-const ages = [12, 18, 20, 16];
-const adults = ages.filter(age => age >= 18);
-console.log(adults); // [18, 20]
-```
+#### 2. **Modifying Content**
+- `element.innerText` - Gets or sets the text content of an element
 
-#### 3. **Array.reduce()**
-- Executes a reducer function on each element of the array, resulting in a single output value.
+#### 3. **Working with Attributes**
+- `element.getAttribute(attr)` - Gets the value of an attribute
+- `element.setAttribute(attr, value)` - Sets the value of an attribute
+
+#### 4. **Styling Elements**
+- `element.style.property` - Directly modify CSS styles (e.g., `color`, `backgroundColor`, `border`)
+
+#### 5. **Creating and Inserting Elements**
+- `document.createElement(tagName)` - Creates a new HTML element
+- `element.append()` - Adds content to the end of an element
+- `element.prepend()` - Adds content to the beginning of an element
+
+### Key Code Example:
 ```javascript
-const sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
-console.log(sum); // 10
+// Selecting and modifying text
+let h2 = document.querySelector("#myh2");
+h2.innerText = h2.innerText + " singh Kushwaha";
+
+// Changing attributes
+let heading = document.querySelector("h2");
+heading.setAttribute("id", "heading");
+
+// Styling
+heading.style.color = "red";
+heading.style.backgroundColor = "yellow";
+heading.style.border = "2px solid black";
+
+// Creating and inserting elements
+let button = document.createElement("button");
+button.innerText = "Click Me";
+button.style.padding = "10px 20px";
+button.style.fontSize = "16px";
+button.style.cursor = "pointer";
+button.style.color = "white";
+button.style.backgroundColor = "blue";
+document.querySelector("body").prepend(button);
 ```
 
 ### Key Concepts:
-- Understanding how to manipulate arrays using built-in methods.
-- The difference between `map`, `filter`, and `reduce`.
+- DOM (Document Object Model) representation of HTML
+- Selecting elements using CSS selectors
+- Modifying element content and attributes
+- Applying styles dynamically
+- Creating new elements and adding them to the page
+
+---
+
+## **Day 6: Events**
+
+### Topics Covered:
+
+#### 1. **Event Handlers**
+- Assigning functions to event properties (e.g., `element.onclick = function`)
+- `onmouseenter` - Triggered when mouse enters an element
+- `onmouseleave` - Triggered when mouse leaves an element
+
+#### 2. **Event Object**
+- Contains information about the event (e.g., `type`, `target`, `clientX`, `clientY`)
+
+#### 3. **addEventListener()**
+- `element.addEventListener(event, function)` - Attaches an event listener to an element
+- More flexible than assigning to event properties
+
+#### 4. **Practical Example: Toggle Background Color**
+```javascript
+let mode = "dark";
+let btn = document.querySelector("#btn1");
+
+function handleClick() {
+  if (mode === "dark") {
+    document.querySelector("body").style.backgroundColor = "blue";
+    mode = "light";
+  } else {
+    document.querySelector("body").style.backgroundColor = "white";
+    mode = "dark";
+  }
+}
+
+btn.addEventListener("click", handleClick);
+```
+
+### Key Concepts:
+- Responding to user interactions (clicks, mouse movements)
+- Event object properties for event details
+- Difference between event properties and `addEventListener`
+- State management in event handlers
 
 ---
 
@@ -276,7 +343,14 @@ console.log(sum); // 10
 ✅ Function Expressions
 ✅ Arrow Functions
 ✅ Understanding Scope (Global & Local)
-✅ Array Methods: map, filter, reduce
+✅ DOM Selection (querySelector, querySelectorAll)
+✅ DOM Content Modification (innerText)
+✅ DOM Attributes (getAttribute, setAttribute)
+✅ DOM Styling (element.style)
+✅ Creating & Inserting DOM Elements
+✅ Event Handlers (onclick, onmouseenter, onmouseleave)
+✅ Event Object Properties
+✅ addEventListener Method
 
 ---
 
@@ -284,9 +358,9 @@ console.log(sum); // 10
 
 Potential topics to explore:
 - Advanced functions (callback, closure)
-- More on array methods
-- String methods
+- More array and string methods
 - Objects and methods
-- DOM manipulation
 - Error handling (try-catch)
-- Asynchronous JavaScript (callbacks, promises, async/await)"
+- Asynchronous JavaScript (callbacks, promises, async/await)
+- Working with APIs
+- Modern JavaScript features (ES6+)"
