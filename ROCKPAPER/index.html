@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper </title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <h1>Rock Paper Scissors</h1>
-    
+
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="assert/rock.png" alt="Rock">
+        </div>
+        <div class="choice" id="paper">
+            <img src="assert/paper.png" alt="Paper">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="assert/scissors.png" alt="Scissors">
+        </div>
+    </div>
+
+    <div class="score_board">
+        <div class="score">
+            <p id="user_score">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="computer_score">0</p>
+            <p>Computer</p>
+        </div>
+    </div>
+
+    <div class="message_container">
+        <p id="message">Play your game</p>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
